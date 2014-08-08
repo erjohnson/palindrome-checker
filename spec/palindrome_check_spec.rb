@@ -14,6 +14,10 @@ describe 'palindrome_check' do
     expect(palindrome_check('?race, car:!')).to eq true
   end
 
+  it 'ignores letter case' do
+    expect(palindrome_check('RaCe cAr')).to eq true
+  end
+
   it 'returns false if not a palindrome' do
     expect(palindrome_check('cathy jumps')).to eq false
   end
