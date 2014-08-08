@@ -1,8 +1,12 @@
 def palindrome_check message
 
-  msg = message.split(" ").join("")
+  exceptions = [',', ':', ';', "'", '"', '.', '-', '?', '!']
+  msg_array = message.split(" ").join("").split("").delete_if { |char| exceptions.index(char) }
+  msg = msg_array.join("")
 
   if msg == msg.reverse
     true
+  else
+    false
   end
 end

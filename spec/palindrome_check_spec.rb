@@ -9,4 +9,8 @@ describe 'palindrome_check' do
   it 'ignores whitespace' do
     expect(palindrome_check('race car')).to eq true
   end
+
+  it 'ignores special characters' do
+    expect(palindrome_check('?race, car:!')).to eq true
+  end
 end
