@@ -11,11 +11,11 @@ describe 'palindrome_check' do
   end
 
   it 'ignores special characters' do
-    expect(palindrome_check('?race, car:!')).to eq true
+    expect(palindrome_check('A man, a plan, a canal: Panama')).to eq true
   end
 
   it 'ignores letter case' do
-    expect(palindrome_check('RaCe cAr')).to eq true
+    expect(palindrome_check('Amor, Roma')).to eq true
   end
 
   it 'returns false if not a palindrome' do
